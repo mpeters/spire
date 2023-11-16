@@ -9,6 +9,7 @@ import (
 	"github.com/spiffe/spire/pkg/server/plugin/nodeattestor/jointoken"
 	"github.com/spiffe/spire/pkg/server/plugin/nodeattestor/k8spsat"
 	"github.com/spiffe/spire/pkg/server/plugin/nodeattestor/k8ssat"
+	"github.com/spiffe/spire/pkg/server/plugin/nodeattestor/keylime"
 	"github.com/spiffe/spire/pkg/server/plugin/nodeattestor/sshpop"
 	"github.com/spiffe/spire/pkg/server/plugin/nodeattestor/tpmdevid"
 	"github.com/spiffe/spire/pkg/server/plugin/nodeattestor/x509pop"
@@ -40,6 +41,7 @@ func (repo *nodeAttestorRepository) BuiltIns() []catalog.BuiltIn {
 		jointoken.BuiltIn(),
 		k8spsat.BuiltIn(),
 		k8ssat.BuiltIn(),
+		keylime.BuiltIn(),
 		sshpop.BuiltIn(),
 		tpmdevid.BuiltIn(),
 		x509pop.BuiltIn(),
